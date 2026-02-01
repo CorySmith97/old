@@ -5,13 +5,23 @@
 #include <stdint.h>
 #include <stddef.h>
 
+#include "alloc.h"
+#include "util.h"
+#include "render.h"
+
 #define SCREEN_WIDTH 800
 #define SCREEN_HEIGHT 600
 
 static SDL_Window *window;
 static SDL_Renderer *renderer;
 
+struct arr_float {
+    _array_header;
+    float *data;
+};
+
 int main(void) {
+    struct arr_float arr = {0};
     if (SDL_Init(SDL_INIT_VIDEO) != 0) {
         panic("Ahh");
     }

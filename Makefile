@@ -1,6 +1,6 @@
 CC=clang
-C_FILES=src/main.c
-C_FLAGS=-std=c89 -Wall
+C_FILES=src/main.c src/alloc.c
+C_FLAGS=-std=c89 -Wall -g
 BUILD_DIR=bin
 
 INCLUDE=

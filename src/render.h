@@ -3,6 +3,10 @@
 #include <stdint.h>
 #include <SDL.h>
 
+union gfx_context {
+    SDL_Renderer *sdl_renderer;
+};
+
 struct color_t {
     uint8_t r, g, b, a;
 };
