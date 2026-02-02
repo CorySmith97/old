@@ -3,8 +3,8 @@
 #include <stdint.h>
 #include <SDL.h>
 #include <SDL_image.h>
-#include "alloc.h"
-#include "util.h"
+#include "../alloc.h"
+#include "../util.h"
 
 #ifdef UNITY_BUILD
     #define EXPORT
@@ -33,7 +33,7 @@ struct texture_t {
 };
 
 /* Public API */
-void render_init();
+void render_init(SDL_Window *window_handle);
 void draw_quad(gfx_context_t *r, int x, int y, int width, int height, struct color_t color);
 void draw_texture(gfx_context_t *r, struct texture_t *tex, int x, int y, float scale);
 

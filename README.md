@@ -9,3 +9,9 @@ mini project of the week in wonderful c.
 
 The core stack will be based on SDL2 as well as SDL_image. I am 
 not planning on adding many other dependencies. 
+
+## Style
+
+I cannot decide on all the little things that need to be decided
+on how I want this project style to be laid out. However, I overall
+    am inclined to a more linux style.

@@ -7,6 +7,7 @@
 
 #include "alloc.h"
 #include "util.h"
+#include "state.h"
 #include "render.h"
 
 #define SCREEN_WIDTH 800
