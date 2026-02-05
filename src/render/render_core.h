@@ -1,16 +1,3 @@
-#ifndef RENDER_H
-#define RENDER_H
-#include <stdint.h>
-#include <SDL.h>
-#include <SDL_image.h>
-#include "../alloc.h"
-#include "../util.h"
-
-#ifdef UNITY_BUILD
-    #define EXPORT
-#else
-    #define EXPORT export 
-#endif /* UNITY_BUILD */
 
 /*
 typedef void *gfx_context_t;
@@ -36,7 +23,3 @@ struct texture_t {
 void render_init(SDL_Window *window_handle);
 void draw_quad(gfx_context_t *r, int x, int y, int width, int height, struct color_t color);
 void draw_texture(gfx_context_t *r, struct texture_t *tex, int x, int y, float scale);
-
-struct texture_t load_texture(struct arena_t *a, struct str_t *file_path);
-
-#endif /* RENDER_H */

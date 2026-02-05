@@ -2,6 +2,10 @@ CompileFlags:
   Add: 
     - -xc 
     - -std=c89 
+    - -I./src/base/
+    - -I./src/render/
+    - -I./src/text/
+    - -I./src/ui/
     - -I/opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2
     - -I/opt/homebrew/Cellar/sdl2_image/2.8.8/include/SDL2
     - -Wno-reserved-id-macro
