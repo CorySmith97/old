@@ -16,17 +16,14 @@
 #define SCREEN_HEIGHT 600
 
 int main(void) {
-    printf("Hello");
-
+    Arena *arena = arena_alloc();
     pl_init(&(PlatformParams){
         .window_width = SCREEN_WIDTH,
         .window_height = SCREEN_HEIGHT,
         .window_name = "Test",
     });
-    printf("Hello");
 
     while (!pl_window_should_close()) {
-        printf("Hello");
         pl_process_input();
     }
 

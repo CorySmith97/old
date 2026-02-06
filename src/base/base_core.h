@@ -43,6 +43,7 @@ struct ArrayHeader {
 };
 
 b32 is_power_of_two(u64 x);
+u64 align(u64 x, u64 alignment);
 
 enum global_error_e {
     GE_SUCCESS,
@@ -53,6 +54,12 @@ enum global_error_e {
 enum log_level_e {
     LOG_LEVEL_INFO,
     LOG_LEVEL_ERROR,
+};
+
+typedef union Color Color;
+union Color {
+    struct {u8 r, g, b, a; };
+    u32;
 };
 
 #endif /* BASE_CORE_H */

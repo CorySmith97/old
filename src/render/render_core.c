@@ -2,10 +2,12 @@
 /*
 * @brief Render local graphics context 
 */
-static gfx_context_t gfx;
+static R_Context *local_context = NULL;
 
 /* Internal Types */
 
-void render_init(SDL_Window *window_handle) {
-    gfx.sdl_renderer = SDL_CreateRenderer(window_handle, 0, SDL_RENDERER_SOFTWARE);
+R_Context *r_init(Arena *arena, SDL_Window *window_handle) {
+    R_Context *gfx = arena_push_struct(arena, R_Context);
+
+    return gfx;
 }

@@ -1,4 +1,9 @@
-
+/*
+ * Global UI Prefix:
+ *  Ui_
+ **/
+#ifndef UI_CORE_H
+#define UI_CORE_H
 
 typedef struct Ui_Node Ui_Node;
 struct Ui_Node {
@@ -9,3 +14,5 @@ struct Ui_Layout {
     Ui_Node *nodes;
     u64 node_count;
 };
+
+#endif /* UI_CORE_H */

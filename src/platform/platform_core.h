@@ -3,6 +3,7 @@
 typedef enum16 PL_Backend;
 enum {
     PL_BackendSDL = 0x8001,
+    PL_BackendSokol = 0x8002,
 };
 
 typedef enum16 PL_MouseButton;

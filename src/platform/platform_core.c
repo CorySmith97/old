@@ -20,16 +20,17 @@ void pl_init(PlatformParams *params) {
 void pl_process_input(void) {
     SDL_Event e = {0};
     while (SDL_PollEvent(&e) != 0) {
-        if (e.type == SDL_Quit) {
+        if (e.type == SDL_QUIT) {
             platform_ctx->quit = true;
         }
     }
 }
 
+void pl_end_frame(void) {
+}
+
 b32 pl_window_should_close(void) {
-    if (platform_ctx->quit)
-        return true;
-    return false;
+    return platform_ctx->quit;
 }
 
 void pl_deinit(void) {

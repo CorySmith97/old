@@ -3,23 +3,15 @@
 typedef void *gfx_context_t;
 */
 
-typedef union gfx_context_t {
-    SDL_Renderer *sdl_renderer;
-} gfx_context_t;
-
-struct color_t {
-    uint8_t r, g, b, a;
-};
-
-struct texture_t {
-    struct color_t tint;
-    int width, height;
+typedef struct R_Context R_Context;
+struct R_Context {
+    Arena *arena;
+    Arena *frame;
     union {
-        void *data;
-    } data;
+        SDL_Renderer *sdl_renderer;
+    } ctx;
 };
 
 /* Public API */
-void render_init(SDL_Window *window_handle);
-void draw_quad(gfx_context_t *r, int x, int y, int width, int height, struct color_t color);
-void draw_texture(gfx_context_t *r, struct texture_t *tex, int x, int y, float scale);
+void r_set_context(R_Context *g);
+R_Context *r_init(Arena *arena, SDL_Window *window_handle);

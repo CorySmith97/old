@@ -1,3 +1,5 @@
+#ifndef BASE_MATH_H
+#define BASE_MATH_H
 
 typedef union Vec2 Vec2;
 union Vec2 {
@@ -10,3 +12,5 @@ union Vec2 {
 typedef union Vec3 Vec3;
 union Vec3 {
 };
+
+#endif /* BASE_MATH_H */
